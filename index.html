@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake news detection</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+      integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+      crossorigin="anonymous"
+    ></script>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          id="menu-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <button
+              onClick="func()"
+              id="close"
+              class="hide ms-auto bg-light me-2"
+            >
+              X
+            </button>
+            <li class="nav-item mx-3 my-1">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item mx-3 my-1">
+              <a class="nav-link" href="#objectives">Objectives</a>
+            </li>
+            <li class="nav-item mx-3 my-1">
+              <a class="nav-link" href="#papers">Papers</a>
+            </li>
+
+            <li class="nav-item mx-3 my-1">
+              <a class="nav-link" href="#dates">Dates</a>
+            </li>
+            <li class="nav-item mx-3 my-1">
+              <a class="nav-link" href="#committee">Committee</a>
+            </li>
+            <li class="nav-item mx-3 my-1">
+              <a class="nav-link" href="#organiser">Organiser</a>
+            </li>
+            <li class="nav-item mx-3 my-1">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="bg-dark text-white">
+      <h1 class="main-heading">
+        Second International workshop on Fake News Detection in <br>Low-Resource Languages (Regiona-FAKE) <br>
+      </h1>
+      <h4><b>On</b> <br></h4>
+      <h3>
+       <b> December 04-06,2024</b>
+      </h3>
+
+      <h3 class="sub-heading m-4"> 
+        As a part of
+        <br><br>
+        Springer - SPELLL 2024 - 2nd International Conference on Speech and Language Technologies for Low-resource Languages, December 07-08, 2024
+        <br><br>KONGU ENGINEERING COLLEGE, TAMIL NADU, INDIA <br>URL: <a href="http://www.spelll.org/">http://www.spelll.org/</a>
+      </h3>
+      <div class="greeting1">
+        We are delighted to announce the Call for Papers for the upcoming Second International Workshop on Fake News Detection in Low-Resource Languages (Regional-FAKE) on December 04-06,2024 conducted as a part of  Second International Conference on Speech & Language Technology for Low-resource Languages (SPELLL 2024), scheduled to be held on 06-08 December 2024 at Kongu Engineering College, Erode, Tamil Nadu, India. 
+      </div>
+      <br>
+      <div class="greeting2">
+        The previous first edition, RegionalFAKE 2022 was held at Sri Sivasubramaniya Nadar College of Engineering, Chennai, India during 24 November, 2022. The proceedings of the first edition have been published in the Springer series: Communications in Computer and Information Science (CCIS). These proceedings can be accessed via <a href="https://link.springer.com/book/10.1007/978-3-031-33231-9">link</a>. 
+      </div>
+    </section>
+
+    <section id="objectives">
+      <div class="container-fluid">
+        <div class="card theme">
+          <div class="card-header">
+            <h5 class="card-title">WORKSHOP THEME</h5>
+          </div>
+          <div
+            class="card-body d-flex align-items-center justify-content-center"
+          >
+            <p class="card-text">
+              To identify the fake news from the multimodal data in low resource languages (LRL).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="papers">
+      <div class="container-fluid cfp">
+        <div class="paper-head">
+          <h1>CALL FOR PAPERS</h1>
+          <h6>INCLUDING TOPIC OF INTEREST</h6>
+        </div>
+        <div class="paper-content">
+         <ul>
+          <li>
+            We invite researchers and practitioners to submit papers reporting
+           on fake news detection and datasets to avoid the issues in fake news
+           detection.
+         </li>
+         <li>
+            We also encourage qualitative studies related to the issues and
+           how to avoid them
+         </li>
+         <li>
+            Regional-FAKE 2024 welcomes theoretical and practical paper
+           submissions on any low-resource languages that contribute to research in
+           identifying trust, fakeness and reliability
+         </li>
+         <li>
+            We particularly encourage studies that address either practical
+           application or improving resources
+         </li>
+         <li>This workshop provides opportunities for researchers from the low-resource language community from 
+          around the world to collaborate with other researchers.
+         </li>
+         </ul>
+         We invite submissions of original, unpublished technical papers on topics that include, but are not limited to, the following:
+          <br>
+          <br>
+          <ol>
+            <li><strong>Corpus creation for fake news in different domains in low resource languages</strong></li>
+            <li><strong>Classification of fake news</strong></li>
+            <li><strong>Development of SOTA and LLM models for detecting fake news</strong></li>
+            <li><strong>Development of cross-lingual and cross-domain models to detect fake news</strong></li>
+            <li><strong>Influence of Social and psychological factors in fake news generation</strong></li>
+            <li><strong>Analyze the impact of fake news</strong></li>
+            <li><strong>Utilization of abundant information spread through fake news to identify event’s history and timeline</strong></li>
+            <li><strong>Measurement of influence of fake news and its consequences on the public</strong></li>
+            <li><strong>Early detection of fake news</strong></li>
+            <li><strong>Fake news detection from multi-modal data (text, image, audio, video)</strong></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <section id="dates">
+      <div c  ass="container">
+        <h1>IMPORTANT DATES</h1>
+        <div id="content">
+          <ul class="timeline">
+            <li class="event" data-date="Aug 25, 2024">
+              <h3>First Call for Workshop Papers</h3>
+            </li>
+            <li class="event" data-date="Sep 30, 2024">
+              <h3>Workshop Paper Due Date</h3>
+            </li>
+            <li class="event" data-date="Oct 25, 2024">
+              <h3>Notification of Acceptance</h3>
+            </li>
+            <li class="event" data-date="Nov 05, 2024">
+              <h3>Camera-ready papers due</h3>
+            </li>
+            <li class="event" data-date="Dec 07-08, 2024">
+              <h3>Workshop Dates</h3>
+            </li>            
+          </ul>
+          <br>
+          <br>
+          <p><b>Note:</b>     All submission deadlines are 11:59 PM AoE Time Zone (Anywhere on Earth).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="objectives">
+      <div class="container-fluid">
+        <div class="card theme">
+          <div class="card-header">
+            <h5 class="card-title">PUBLICATION</h5>
+          </div>
+          <div
+            class="card-body align-items-center justify-content-center"
+          >
+            <p class="publication">
+              Workshop will be held at the following conference venue:
+              <br><br>
+              SPELLL 2024 (Second International Conference on Speech and Language Technologies for Low-Resource Languages) will be held in Tamil Nadu, India from December 06-08, 2024 and the workshops will be held on December 07-08, 2024. The workshop accepts regular and short papers. 
+              <ul>
+                <b>
+                <li>All Accepted papers that are presented at the conference will be published in the Springer series: Communications in Computer and Information Science (CCIS) - Scopus Indexed.</li>
+                <li>
+                  Volumes published will be indexed in the Conference Proceedings Citation Index (CPCI) - part of Clarivate Analytics’ Web of Science, EI Engineering Index, ACM Digital Library, DBLP, Google Scholar, and Scopus.</li>
+                </b>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div class="card objective">
+          <div class="card-header">
+            <h5 class="card-title">AUTHOR GUIDELINES</h5>
+          </div>
+          <div class="row">  
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text">
+                    Authors must follow the Springer LNCS formatting instructions.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text">
+                    For camera-ready papers use Latex or Word style provided on the authors' page for the preparation of papers.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text">
+                     To uniquely characterize fake news on social media/news
+                    articles and analyze the velocity of the fake news.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+    </section>
+
+    <section id="committee">
+      <h1 class="text-white">PROGRAM COMMITEE</h1>
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active bg-dark"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            class="bg-dark"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            class="bg-dark"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="3"
+            class="bg-dark"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="4"
+            class="bg-dark"
+            aria-label="Slide 5"
+          ></button>
+        </div>
+        <div class="carousel-inner bg-white text-dark">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <p>
+                      1. Kalika Ball, <br />Principal Researcher, Microsoft
+                      Research India
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <p>
+                      2. Shantipriya Parida, <br />Senior Al Scientist, Silo Al,
+                      Charles University in Prague, Helsinki, Uusimaa, Finland
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <p>
+                      3. Anbukarasi. S, <br />Associate Professor, Department of
+                      Computer Science and Design, Kongu Engineering College,
+                      India
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <p>
+                      4. Iraklis Variamis, <br />Department of Informatics &
+                      Telematics, Harokopio University of Athens, Greece
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <p>
+                      5. Paolo Rosso<br />
+                      Professor, Computer Science, Universitat Politècnica de,
+                      València
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <p>
+                      6. Ebuka Ibeke, <br />
+                      School of Creative and Cultural Business, Robert Gordon
+                      University, United Kingdom
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <p>
+                      7. All Ahmadian, <br />School of Mathematical Sciences,
+                      College of Science and Technology, Wenzhou-Kean
+                      University, Wenzhou, China
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <p>
+                      8. Yuhang Wang, <br />Data Science College, Talyuan
+                      University of Technology, Jinzhong, Shanxi, 030600, China
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <p>
+                      9. Yanjie Yang, <br />
+                      Data Science College, Talyuan University of Technology,
+                      Jinzhong, Shanxi, 030600, China
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <p>
+                      10. C.S.Kanimohiselvi, <br />Professor and head,
+                      Department of Al, Kongu Engineering College, India
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <p>
+                      11. K.Premalatha, <br />Professor, Department of CSE,
+                      Bannarl Amman Institute of Technology, Sathyamangalam,
+                      India
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <p>
+                      12. Elizabeth Sherly, <br />Senior Professor, Indian
+                      Institute of Information Technology and Management Kerala
+                      (IIITM-K)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <p>
+                      13. Michael Madden, <br />National University of Ireland
+                      Galway, Ireland
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <p>14. Jiawei Zhang, <br />UC Davis, USA</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <p>15. Kalina Bontcheva, <br />University of Sheffield</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="organiser">
+      <div class="container-fluid cfp">
+        <div class="organiser-head">
+          <h1>ORGANISERS</h1>
+        </div>
+        <div class="organiser-content">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-lg-3">
+                    <i class="fa-regular fa-circle-user"></i>
+                  </div>
+                  <div class="col-lg-9">
+                    <div class="card-body">
+                      <p class="card-text">
+                        Malliga Subramanian,<br />
+                        Kongu Engineering College, India
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-lg-3">
+                    <i class="fa-regular fa-circle-user"></i>
+                  </div>
+                  <div class="col-lg-9">
+                    <div class="card-body">
+                      <p class="card-text">
+                        S. Angel Deborah,<br />
+                        Sri Sivasubramaniya Nadar College of Engineering, India
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-lg-3">
+                    <i class="fa-regular fa-circle-user"></i>
+                  </div>
+                  <div class="col-lg-9">
+                    <div class="card-body">
+                      <p class="card-text">
+                        Kogilavani Shanmugavadivel, Kongu Engineering College,
+                        India
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+    </section>
+
+    <section id="contact" class="text-white bg-custom">
+      <div class="container-fluid">
+        <h1>WORKSHOP CONTACT</h1>
+
+        <br />
+        <p>Mail us :</p>
+        <div class="card-group">
+          <div class="card">
+            <div class="card-body">
+              <a href="mailto:mallisenthil.cse@kongu.edu">
+                <p class="card-text">
+                  <i class="fa-regular fa-envelope"></i>
+                  mallisenthil.cse@kongu.edu
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <a href="mailto:angeldeborahs@ssn.edu.in">
+                <p class="card-text">
+                  <i class="fa-regular fa-envelope"></i>
+                  angeldeborahs@ssn.edu.in
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <a href="mailto:kogilavani.cse@kongu.edu">
+                <p class="card-text">
+                  <i class="fa-regular fa-envelope"></i>
+                  kogilavani.cse@kongu.edu
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <br>
+        <p>Contact us :</p>
+        <div class="card-group">
+          <div class="card">
+            <div class="card-body color">
+              +91 9842278780
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body color">
+              +91 9840731931
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body color">
+              +91 9486153223
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function func() {
+        $(".navbar .collapse").collapse("hide");
+      }
+      if (screen.width < 1000) {
+        $(".navbar").addClass("bg-custom");
+        $("#close").removeClass("hide");
+        $("#close").addClass("show");
+      }
+      var menuelements = document.getElementsByClassName("nav-link");
+      for (var i = 0; i < menuelements.length; i++) {
+        menuelements[i].addEventListener("click", () => {
+          $(".navbar .collapse").collapse("hide");
+        });
+      }
+      $(window).on("scroll", () => {
+        var scroll = $(window).scrollTop();
+        if (scroll >= screen.height) {
+          $(".navbar").addClass("bg-custom");
+        } else if (screen.width < 1000) {
+          $(".navbar").addClass("bg-custom");
+        } else {
+          $(".navbar").removeClass("bg-custom");
+        }
+      });
+    </script>
+    <!-- jquery  -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+      integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
